@@ -5,12 +5,11 @@ import argparse
 from collections import Counter
 from operator import itemgetter
 import string
-
 import re
 
 
 def get_letters(sentence):
-    return [l for l in "".join(re.findall("[a-zA-Z]+", sentence)).lower()]
+    return [letter for letter in "".join(re.findall("[a-zA-Z]+", sentence)).lower()]
 
 
 def evaluate_sentence(sentence):
